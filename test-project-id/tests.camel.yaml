@@ -1,0 +1,15 @@
+- route:
+    id: route-c73c
+    nodePrefixId: route-84c
+    from:
+      id: from-f426
+      uri: kamelet:timer-source
+      parameters:
+        message: hello
+      steps:
+        - process:
+            id: process-2d7f
+            ref: CamelProcessor
+        - log:
+            id: log-c54c
+            message: ${body}
